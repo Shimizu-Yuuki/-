@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet"href="../css/style.css">//cssファイルの読み込み
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  </head>
+<body>
+  <div id="app">
+    <input type="text" v-model="textInput">
+    <p>{{ textInput }}</p>
+  
+
+  
+    <div class="commands">
+    <button @click="addForm">追加</button>
+    <li v-for="(list,index) in lists">
+      <span>{{index}}-{{list.name}}</span>
+      </li>
+    <p>{{ textInput }}</p>
+    </div>
+
+    <div class="commands">
+    <button @click="deleteForm(id)">削除</button>
+    </div>
+
+
+  </div>
+
+  <script src="../js/index.js"></script>//JavaScriptファイルの読み込み
+</body>
+</html>
